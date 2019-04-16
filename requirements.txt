@@ -4,5 +4,5 @@ Augmentor
 scipy
 scikit-image
 sklearn
-PIL
+Pillow
 keras
