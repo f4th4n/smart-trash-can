@@ -2,7 +2,7 @@ numpy
 flask
 Augmentor
 scipy
-skimage
+scikit-image
 sklearn
 PIL
 keras
