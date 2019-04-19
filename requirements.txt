@@ -6,3 +6,4 @@ scikit-image
 sklearn
 Pillow
 keras
+tensorflow
