@@ -15,11 +15,13 @@ def welcome_get():
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <h2>Click button below, and pick a trash photo</h2>
     <input id="file" type="file" accept="image/*" onchange="test()">
+    <h1 id="loading" style="visibility: hidden;">Loading...</h1>
     <form method="post" action="/" enctype='multipart/form-data'>
-      <input id="base64img" name="img" type="text" />
+      <input id="base64img" name="img" type="text" style="visibility: hidden" />
       <br />
-      <input type="submit" value="Submit" />
+      <input id="submitsubmit" type="submit" value="Submit" style="visibility: hidden" />
     </form>
 
     <script>
@@ -27,15 +29,17 @@ def welcome_get():
          var reader = new FileReader();
          reader.readAsDataURL(file);
          reader.onload = function () {
-           console.log(reader.result);
-           document.getElementById('base64img').value = reader.result
+           document.querySelector('#base64img').value = reader.result
+           document.querySelector('#submitsubmit').click()
          };
          reader.onerror = function (error) {
+            alert(error)
            console.log('Error: ', error);
          };
       }
 
     function test() {
+      document.querySelector('#loading').style.visibility = 'visible'
       const $file = document.getElementById('file')
       setBase64($file.files[0])
     }
@@ -65,4 +69,5 @@ def welcome_post():
   return '<h1>Prediction:  ' + prediction + '</h1><br /><br /><a href="/">Home</a>'
 
 def get_app():
+  print('ff')
   return app
