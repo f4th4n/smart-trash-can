@@ -10,3 +10,14 @@ To classify a trash from photo.
 ### To start prediction
 ```$ python3 app.py start_server```
 then open ```localhost:19000``` in the browser.
+
+### Demo
+[http://trash.bunga.top/](http://trash.bunga.top/)
+
+And here some image you can try it
+
+![test1](http://storage.bunga.top/smart-trash-can/test_3.jpg)
+![test1](http://storage.bunga.top/smart-trash-can/test_4.jpg)
+
+![test1](http://storage.bunga.top/smart-trash-can/test_1.jpg)
+![test1](http://storage.bunga.top/smart-trash-can/test_2.jpg)
